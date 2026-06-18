@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+
+public class rotation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int n = sc.nextInt();
+        System.out.println("enter the values ");
+        int[] arr = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        } 
+        int d = 8 ;
+        int[] temp = new int[d];
+
+        for(int i =0;i<d;i++){
+            temp[i] = arr[i];
+        }
+        
+        for(int i=0;i<n-d;i++){
+            arr[i] = arr[i+d];
+
+        }
+         for(int i=0;i<d;i++){
+            arr[n-d+i] =  temp[i];
+         }
+        System.out.println("the elements");
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+    
+}
